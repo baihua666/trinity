@@ -15,7 +15,7 @@ import com.trinity.sample.R
 import com.trinity.sample.adapter.MediaAdapter
 import com.trinity.sample.entity.MediaItem
 import com.trinity.sample.view.SpacesItemDecoration
-import kotlinx.android.synthetic.main.item_media.*
+//import kotlinx.android.synthetic.main.item_media.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

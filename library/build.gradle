@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+// apply plugin: 'com.novoda.bintray-release'
 apply from: rootProject.file("secret.gradle")
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android-extensions'
 apply plugin: 'bugly'
 
 bugly {
@@ -20,6 +20,9 @@ android {
         versionCode 1
         versionName "0.2.9.1"
 
+        buildConfigField 'String', 'VERSION_NAME', '"' + versionName + '"'
+
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
@@ -30,6 +33,8 @@ android {
             }
         }
     }
+
+    ndkVersion "20.0.5594570"
 
     buildTypes {
         release {
@@ -106,14 +111,14 @@ tasks.withType(Javadoc) {
     options.addStringOption('charSet', 'UTF-8')
 }
 
-publish {
-    userOrg = 'wlanjie'
-    groupId = 'com.github.wlanjie'
-    artifactId = 'trinity'
-    publishVersion = '0.2.9.1'
-    desc = 'android short video sdk'
-    website = 'https://github.com/wlanjie/trinity'
-
-    bintrayUser = bintray_user
-    bintrayKey = bintray_key
-}
+//publish {
+//    userOrg = 'wlanjie'
+//    groupId = 'com.github.wlanjie'
+//    artifactId = 'trinity'
+//    publishVersion = '0.2.9.1'
+//    desc = 'android short video sdk'
+//    website = 'https://github.com/wlanjie/trinity'
+//
+//    bintrayUser = bintray_user
+//    bintrayKey = bintray_key
+//}

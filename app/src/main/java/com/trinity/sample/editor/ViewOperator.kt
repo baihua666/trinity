@@ -160,6 +160,8 @@ class ViewOperator(
       EditorPage.FILTER, EditorPage.SOUND, EditorPage.MV -> {
         hideBottomView()
       }
+
+      else -> {}
     }
   }
 
